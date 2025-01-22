@@ -1,0 +1,91 @@
+2025-01-22 06:09:24 | house_price_prediction | INFO | Loading configuration from config\config.yaml
+2025-01-22 06:09:24 | house_price_prediction | INFO | Configuration loaded successfully
+2025-01-22 06:09:26 | house_price_prediction | INFO | Deleted existing MLflow database
+2025-01-22 06:09:26 | house_price_prediction | INFO | Starting pipeline execution
+2025-01-22 06:09:30 | house_price_prediction | INFO | MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-01-22 06:09:30 | house_price_prediction | INFO | Experiment name: house_price_prediction_experiment
+2025-01-22 06:09:33 | house_price_prediction | INFO | Started pipeline run with ID: 8fc418e5aefa471d8f3bdf0c36b41df6
+2025-01-22 06:09:33 | house_price_prediction | INFO | Step 1: Loading data
+2025-01-22 06:09:33 | house_price_prediction | INFO | initialized DataLoader with path: artifacts/train.csv and artifacts/test.csv
+2025-01-22 06:09:33 | house_price_prediction | INFO | loading data from artifacts/train.csv and artifacts/test.csv
+2025-01-22 06:09:33 | house_price_prediction | INFO | loaded train data successfully with shape (1460, 81)
+2025-01-22 06:09:33 | house_price_prediction | INFO | loaded test data successfully with shape (1459, 80)
+2025-01-22 06:09:33 | house_price_prediction | INFO | Validating data
+2025-01-22 06:09:33 | house_price_prediction | WARNING | Found null values:
+LotFrontage      259
+Alley           1369
+MasVnrType       872
+MasVnrArea         8
+BsmtQual          37
+BsmtCond          37
+BsmtExposure      38
+BsmtFinType1      37
+BsmtFinType2      38
+Electrical         1
+FireplaceQu      690
+GarageType        81
+GarageYrBlt       81
+GarageFinish      81
+GarageQual        81
+GarageCond        81
+PoolQC          1453
+Fence           1179
+MiscFeature     1406
+dtype: int64
+2025-01-22 06:09:33 | house_price_prediction | INFO | Data validation completed successfully
+2025-01-22 06:09:33 | house_price_prediction | INFO | Step 2: Preprocessing data
+2025-01-22 06:09:33 | house_price_prediction | INFO | Initialized DataProcessor
+2025-01-22 06:09:33 | house_price_prediction | INFO | Starting fit_transform process
+2025-01-22 06:09:33 | house_price_prediction | INFO | Fitting MinMaxScaler for numerical columns
+2025-01-22 06:09:33 | house_price_prediction | INFO | Saving preprocessors to models/preprocessing
+2025-01-22 06:09:33 | house_price_prediction | INFO | Preprocessors saved successfully
+2025-01-22 06:09:33 | house_price_prediction | INFO | Fit_transform completed successfully
+2025-01-22 06:09:33 | house_price_prediction | INFO | Shape of y_train: (1168, 34), y_test: (292, 34)
+2025-01-22 06:09:33 | house_price_prediction | INFO | Shape of y_train: (1168,), y_test: (292,)
+2025-01-22 06:09:33 | house_price_prediction | INFO | Saving preprocessors to models/preprocessing
+2025-01-22 06:09:33 | house_price_prediction | INFO | Preprocessors saved successfully
+2025-01-22 06:09:33 | house_price_prediction | INFO | Step 3: Training and evaluating models
+2025-01-22 06:09:33 | house_price_prediction | INFO | MLflow setup completed successfully
+2025-01-22 06:09:33 | house_price_prediction | INFO | Initialized ModelTrainer with experiment: house_price_prediction_experiment
+2025-01-22 06:09:33 | house_price_prediction | INFO | Starting training of all models
+2025-01-22 06:09:33 | house_price_prediction | INFO | Training linear_regression model
+2025-01-22 06:09:33 | house_price_prediction | INFO | Creating model of type: linear_regression
+2025-01-22 06:09:33 | house_price_prediction | INFO | Successfully created linear_regression model
+2025-01-22 06:09:44 | house_price_prediction | INFO | Completed training linear_regression model
+2025-01-22 06:09:44 | house_price_prediction | INFO | Metrics: {'rmse': 0.052236597644561684, 'mae': 0.03272863569774116, 'r2': 0.8155317822983866}
+2025-01-22 06:09:44 | house_price_prediction | INFO | Training random_forest_regressor model
+2025-01-22 06:09:44 | house_price_prediction | INFO | Creating model of type: random_forest_regressor
+2025-01-22 06:09:44 | house_price_prediction | INFO | Successfully created random_forest_regressor model
+2025-01-22 06:09:51 | house_price_prediction | INFO | Completed training random_forest_regressor model
+2025-01-22 06:09:51 | house_price_prediction | INFO | Metrics: {'rmse': 0.03895445818552265, 'mae': 0.024683721871634697, 'r2': 0.8974144658900515}
+2025-01-22 06:09:51 | house_price_prediction | INFO | Training gradient_boosting_regressor model
+2025-01-22 06:09:51 | house_price_prediction | INFO | Creating model of type: gradient_boosting_regressor
+2025-01-22 06:09:51 | house_price_prediction | INFO | Successfully created gradient_boosting_regressor model
+2025-01-22 06:09:57 | house_price_prediction | INFO | Completed training gradient_boosting_regressor model
+2025-01-22 06:09:57 | house_price_prediction | INFO | Metrics: {'rmse': 0.038327270343555625, 'mae': 0.02479592055662768, 'r2': 0.9006912380549712}
+2025-01-22 06:09:57 | house_price_prediction | INFO | Selecting best model
+2025-01-22 06:09:57 | house_price_prediction | INFO | Selected gradient_boosting_regressor as best model
+2025-01-22 06:09:57 | house_price_prediction | INFO | Best model metrics: {'rmse': 0.038327270343555625, 'mae': 0.02479592055662768, 'r2': 0.9006912380549712}
+2025-01-22 06:09:57 | house_price_prediction | INFO | Completed training all models
+2025-01-22 06:09:57 | house_price_prediction | INFO | Pipeline execution completed successfully
+2025-01-22 06:14:52 | house_price_prediction | INFO | Loading configuration from config\config.yaml
+2025-01-22 06:14:52 | house_price_prediction | INFO | Configuration loaded successfully
+2025-01-22 06:14:52 | house_price_prediction | INFO | Loading best model from MLflow
+2025-01-22 06:14:52 | house_price_prediction | INFO | Initialized DataProcessor
+2025-01-22 06:14:52 | house_price_prediction | INFO | Loading preprocessors from models/preprocessing
+2025-01-22 06:14:52 | house_price_prediction | INFO | Preprocessors loaded successfully
+2025-01-22 06:14:52 | house_price_prediction | INFO | Model and preprocessor loaded successfully
+2025-01-22 06:17:36 | house_price_prediction | INFO | Loading configuration from config\config.yaml
+2025-01-22 06:17:36 | house_price_prediction | INFO | Configuration loaded successfully
+2025-01-22 06:17:36 | house_price_prediction | INFO | Loading best model from MLflow
+2025-01-22 06:17:36 | house_price_prediction | INFO | Initialized DataProcessor
+2025-01-22 06:17:36 | house_price_prediction | INFO | Loading preprocessors from models/preprocessing
+2025-01-22 06:17:36 | house_price_prediction | INFO | Preprocessors loaded successfully
+2025-01-22 06:17:36 | house_price_prediction | INFO | Model and preprocessor loaded successfully
+2025-01-22 06:19:52 | house_price_prediction | INFO | Loading configuration from config\config.yaml
+2025-01-22 06:19:52 | house_price_prediction | INFO | Configuration loaded successfully
+2025-01-22 06:19:52 | house_price_prediction | INFO | Loading best model from MLflow
+2025-01-22 06:19:53 | house_price_prediction | INFO | Initialized DataProcessor
+2025-01-22 06:19:53 | house_price_prediction | INFO | Loading preprocessors from models/preprocessing
+2025-01-22 06:19:53 | house_price_prediction | INFO | Preprocessors loaded successfully
+2025-01-22 06:19:53 | house_price_prediction | INFO | Model and preprocessor loaded successfully

@@ -1,0 +1,13 @@
+prefix=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library
+exec_prefix=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library
+libdir=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library/lib
+sharedlibdir=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library/lib
+includedir=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

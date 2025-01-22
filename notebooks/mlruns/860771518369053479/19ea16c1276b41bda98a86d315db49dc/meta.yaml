@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/notebooks/mlruns/860771518369053479/19ea16c1276b41bda98a86d315db49dc/artifacts
+end_time: 1737360693249
+entry_point_name: ''
+experiment_id: '860771518369053479'
+lifecycle_stage: active
+run_id: 19ea16c1276b41bda98a86d315db49dc
+run_name: random_forest
+run_uuid: 19ea16c1276b41bda98a86d315db49dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737360677125
+status: 3
+tags: []
+user_id: andhi

@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/notebooks/mlruns/860771518369053479/4c3c42562c154a9bbb0260feb8719c1e/artifacts
+end_time: 1737360677104
+entry_point_name: ''
+experiment_id: '860771518369053479'
+lifecycle_stage: active
+run_id: 4c3c42562c154a9bbb0260feb8719c1e
+run_name: linear_regression
+run_uuid: 4c3c42562c154a9bbb0260feb8719c1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737360657857
+status: 3
+tags: []
+user_id: andhi

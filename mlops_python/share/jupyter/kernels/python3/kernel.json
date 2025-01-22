@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python\\python.exe",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}

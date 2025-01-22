@@ -1,0 +1,12 @@
+prefix=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library
+exec_prefix=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library
+libdir=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library/lib
+includedir=D:/Kuliah/Bootcamp/Day_26_Python_MLops/mlops_assignment/mlops_python/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++ 
+Requires.private: 
+Cflags: -I${includedir} 
