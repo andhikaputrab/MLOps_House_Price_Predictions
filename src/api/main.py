@@ -122,7 +122,7 @@ async def startup_event():
         # logger.info(f"Loading model from path: {model_path}")
         # model = mlflow.sklearn.load_model(model_path)
         
-        model_path = 'mlruns/1/dd8b7ac4ca5b4e479f3a7b877034339c/artifacts/gradient_boosting_regressor/model.pkl'
+        model_path = 'mlruns/1/d95393d5106b4b849ecc6b5ba2b779d7/artifacts/linear_regression/model.pkl'
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
 

@@ -70,7 +70,7 @@ class HousePricePredictionRequest(BaseModel):
                 "GrLivArea": 1710.0,
                 "FullBath": 2,
                 "TotRmsAbvGrd": 8,
-                "GarageCars": 2,
+                "GarageCars": 548.0,
                 "GarageArea": 548.0,
                 "MSZoning": "RL",
                 "Utilities": "AllPub",
