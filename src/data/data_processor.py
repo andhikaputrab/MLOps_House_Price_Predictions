@@ -61,19 +61,20 @@ class DataProcessor:
             important_num_cols = list(corr_with_saleprice[(corr_with_saleprice > 0.50) | (corr_with_saleprice < -0.50)].index)
             cat_cols = ["MSZoning", "Utilities","BldgType","Heating","KitchenQual","SaleCondition","LandSlope"]
             important_cols = important_num_cols + cat_cols
-            
-            # Split features and target
-            X = df[important_cols]
-            y = df[target_col] if target_col in df.columns else None
+            df = df[important_cols]
         
             # Encode categorical columns
-            X = pd.get_dummies(X, drop_first=True)
+            df = pd.get_dummies(df, drop_first=True)
 
             # Scale numerical features
             logger.info("Fitting MinMaxScaler for numerical columns")
             numerical_cols = [col for col in important_num_cols if col in df.columns]
-            X[numerical_cols] = self.scaler.fit_transform(X[numerical_cols])
+            df[numerical_cols] = self.scaler.fit_transform(df[numerical_cols])
 
+            # Split features and target
+            X = df.drop(columns=[target_col], errors='ignore')
+            y = df[target_col] if target_col in df.columns else None
+        
             # Save preprocessors
             self.save_preprocessors()
             
